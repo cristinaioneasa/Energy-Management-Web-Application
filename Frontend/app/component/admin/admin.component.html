@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+<div>
+  <h1>PowerPlus!</h1>
+</div>
+
+<div class="panel">
+  <button id="b1" type="submit" (click)="findAllDevices()">Afiseaza toate dispozitivele</button><br>
+  <button id="b2" type="submit" (click)="findAll()">Afiseaza toti userii</button><br>
+  <button id="b3" (click)="showInsertDeviceSection = !showInsertDeviceSection">Adauga un device</button><br>
+  <button id="b4" (click)="showDeleteDeviceSection = !showDeleteDeviceSection">Sterge un device</button>
+  <button id="b8" (click)="showDeleteUserSection = !showDeleteUserSection">Sterge un client</button><br>
+</div>
+
+<div class = "chat">
+  <app-chat></app-chat>
+</div>
+
+<div class="container">
+  <div>
+  <form id = "lista_device-uri" *ngIf="showDeviceList">
+    <mat-list>
+      <mat-list-item class="element"  *ngFor = "let device of devicesList">
+
+        <div mat-line >Id: {{device.id}} -> {{device.name}}</div>
+        <div mat-line >Descriere: {{device.description}}</div>
+        <div mat-line >Adresa: {{device.address}}</div>
+        <div mat-line >Consum maxim: {{device.maxHEnergyConsumption}} wati/ora</div>
+        <div mat-line >Id-ul clientului: {{device.idClient}}</div>
+        <br><br>
+      </mat-list-item>
+    </mat-list>
+  </form>
+  </div>
+
+  <div>
+  <form id = "lista_clienti" *ngIf="showClientList">
+    <mat-list>
+      <mat-list-item class="element"  *ngFor = "let user of usersList">
+
+        <div mat-line >Id: {{user.id}} -> {{user.name}}</div>
+        <div mat-line >Username: {{user.username}}</div>
+        <div mat-line >Role: {{user.role}}</div>
+
+        <br><br>
+      </mat-list-item>
+
+    </mat-list>
+  </form>
+  </div>
+
+
+  <div class="insertDevice" class="insertDevice" *ngIf="showInsertDeviceSection">
+  <h2>Adauga device</h2>
+    <form (ngSubmit)="insertDevice()"  #deviceForm="ngForm">
+      <label for="name">Denumire</label><br>
+      <input id="name" name="name" [(ngModel)]="device.name" required><br>
+
+      <label for="description">Descriere</label><br>
+      <input id="description" name="description" [(ngModel)]="device.description" required><br>
+
+      <label for="address">Adresa</label><br>
+      <input id="address" name="address" [(ngModel)]="device.address" required><br>
+
+      <label for="maxHEnergyConsumption">Consum maxim</label><br>
+      <input id="maxHEnergyConsumption" name="maxHEnergyConsumption" [(ngModel)]="device.maxHEnergyConsumption" required><br>
+
+      <label for="address">ID client</label><br>
+      <input id="idClient" name="idClient" [(ngModel)]="device.idClient" required><br>
+
+      <button id="b5" type="submit">Insert</button>
+    </form>
+  </div>
+
+  <div class="deleteDevice" class="deleteDevice" *ngIf="showDeleteDeviceSection">
+  <h2>Sterge device</h2>
+    <form (ngSubmit)="deleteDevice(device.id)"  #deviceForm="ngForm">
+      <label for="name">Id</label><br>
+      <input id="id" name="name" [(ngModel)]="device.id" required><br>
+
+      <button id="b6" type="submit">Delete</button>
+    </form>
+  </div>
+
+  <div class="deleteUser" *ngIf="showDeleteUserSection">
+    <h2>Sterge user</h2>
+    <form (ngSubmit)="deleteUser(user.id)" #userForm="ngForm">
+      <label for="name">Id user</label><br>
+      <input id="idUser" name="name" [(ngModel)]="user.id" required><br>
+
+      <button id="b7" type="submit">Delete</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>

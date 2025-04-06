@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  background-color: black;
+}
+.container {
+  background-color: black;
+  height: 40px;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: normal;
+}
+
+h1{
+  margin-top: 25px;
+  margin-left: -175px;
+  font-size: 55px;
+  font-style: oblique;
+  color: white;
+
+
+}
+
+#icon_login {
+  margin-left: 1100px;
+  margin-top: -10px;
+}
+
+.button-row{
+  margin-top: 75px;
+  margin-left: 450px;
+}
+
+.panel {
+  background-color: darkblue;
+  border-radius: 5px;
+  width: 420px;
+  margin-top: -27px;
+  margin-left: 15px;
+  font-size: 17px;
+  color: white;
+}
+
+.panel h2 {
+  font-size: 23px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+#img1{
+  margin-left: 10px;
+}
+
+#img2{
+  margin-left: 10px;
+}
+
+#showDevices{
+  background: black;
+  color: white;
+  margin-left: 600px;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
+#lista_device-uri{
+  margin-left: 600px;
+  margin-top: -1000px;
+  background: black;
+  color: white;
+  font-size: 18px;
+  width: 600px;
+}
+
+#calendar{
+  margin-left: 600px;
+  margin-top: 100px;
+}
+
+#myChart {
+  width: 800px !important;
+  height: 350px !important;
+  margin-left: 600px;
+}
+
+.chat{
+  margin-left: 300px;
+  margin-top: 10px
+}

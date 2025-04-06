@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+<div class="container">
+  <h1>Login</h1>
+  <form (ngSubmit)="loginUser()">
+
+    <label for="primaryEmail">Email</label><br>
+    <div *ngIf="prmEmail.errors?.['email']" id="valid_mess"> Email address is not valid!</div>
+    <div *ngIf="prmEmail.errors?.['required']" id="valid_mess2">The username field cannot be empty!</div>
+    <input type="primaryEmail" [(ngModel)]="user.username" required [email]="true" #prmEmail="ngModel" id="primaryEmail" name="primaryEmail"><br>
+
+    <label for="password">Password</label><br>
+    <div *ngIf="nullPassword.errors?.['required']" id="valid_mess3">The password field cannot be empty!</div>
+    <input type="password"  [(ngModel)]="user.password" required #nullPassword="ngModel" id="password" name="password"><br>
+
+    <h2>Forgot password?</h2>
+    <button id="login" type="submit" (click)="loginUser()">Click here to login</button>
+    <!--<button type="submit" (click)="loginUser()">Admins login here</button> -->
+    <p>You don't have an account?</p>
+    <h3><a (click)="goToRegister()">Click here to register</a></h3>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+.chat-container {
+  height: 300px;
+  width: 500px;
+  overflow-y: auto;
+  border: 1px solid;
+  background-color: black;
+  margin-left: 300px;
+}
+.chat-box{
+  display: flex;
+}
+.member-list {
+  background-color: white;
+  padding: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+li.active {
+  background-color: darkblue;
+  color: white;
+}
+
+.chat-messages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-messages li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.chat-messages li.self {
+  align-self: flex-end;
+  background-color: darkblue;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.chat-messages li:not(.self) {
+  align-self: flex-start;
+  background: white;
+  width: 300px;
+}
+
+.send-message{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+.send-button{
+  background: darkblue;
+  color:white;
+}
+
+.avatar.self {
+  margin-left: 10px;
+  margin-right: 0;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>PowerPlus!</h1>
+  </div>
+
+  <div>
+    <button  id="showDevices" type="submit" (click)="ShowDevices()">Show your devices</button>
+  </div>
+
+
+  <div class="panel">
+    <h2>Anunturi</h2>
+    <p style="font-weight: bold; line-height: 1;">• Webinar despre Economisirea Energiei în Locuință</p>
+    <a id="img1" ><img src="https://www.nunify.com/wp-content/uploads/2020/08/webinar-1.jpg" width="400" height="150"></a>
+    <br>
+    <br>
+    <p style="line-height: 0.5; padding-left: 15px;"> Data și Ora: 15/01/2024 16:00</p>
+    <p style="line-height: 0.5; padding-left: 15px;">Unde: <a href="https://us04web.zoom.us/j/79204348580?pwd=BrqSFKxcPWqTomo47iuBwVbgzZ7BOk.1">Zoom</a></p>
+    <p style="line-height: 1; padding-left: 15px;">Conferențiari Invitați: Dr. Elena Andreescu - Expert în Eficiența Energetică</p>
+    <p style=" line-height: 1; padding-left: 15px;">Beneficii ale Participării la Webinar:</p>
+    <p style="line-height: 0.5; padding-left: 25px;">⇒ Învățare de la Experți</p>
+    <p style="line-height: 0.5; padding-left: 25px;">⇒ Sfaturi Pratice</p>
+    <p style="line-height: 0.5; padding-left: 25px;">⇒ Economii pe Termen Lung</p>
+    <br>
+    <p style="font-weight: bold; line-height: 0.5;">• Programul de Subvenții pentru Panouri Solare</p>
+    <a id="img2"><img src="https://st3.idealista.com/cms/archivos/styles/idcms_social_tablet/public/2020-08/media/image/solar-panels-1477987_1280.jpg?fv=dcEINdFd&itok=tSfKbtaD" width="400" height="150"></a>
+    <p style=" padding-left: 15px;">Detalii ale Programului:</p>
+    <p style="padding-left: 15px;"> ⇒ Subvenții Generoase: </p>
+    <p style="padding-left: 15px;" >Oferim subvenții pentru instalarea de panouri solare în locuințele particulare, ajutându-vă să economisiți pe termen lung și să contribuiți la un mediu mai curat.</p>
+    <p style="padding-left: 15px;" > ⇒ Consultanță Gratuită: </p>
+    <p style="padding-left: 15px;" >Echipa noastră de experți în energie verde vă va ghida pe tot parcursul procesului, de la evaluarea inițială până la instalarea și mentenanța panourilor solare.</p>
+    <p style="padding-left: 15px;" > ⇒ Impact Ecologic Pozitiv:</p>
+    <p style="padding-left: 15px;" >Cu panouri solare, veți reduce amprenta de carbon și veți sprijini utilizarea energiei regenerabile, contribuind la protejarea mediului.</p>
+    <br>
+  </div>
+
+
+  <div>
+    <form id = "lista_device-uri">
+      <mat-list>
+        <mat-list-item class="element"  *ngFor = "let device of devicesList">
+
+          <div mat-line >Id: {{device.id}} -> {{device.name}}</div>
+          <div mat-line >Descriere: {{device.description}}</div>
+          <div mat-line >Adresa: {{device.address}}</div>
+          <div mat-line >Consum maxim: {{device.maxHEnergyConsumption}} wati/ora</div>
+          <br><br>
+        </mat-list-item>
+
+      </mat-list>
+    </form>
+
+    <div class = "chat">
+      <app-chat></app-chat>
+    </div>
+
+  </div>
+    <div id="calendar">
+      <h2>Select a Date</h2>
+
+      <form>
+        <label for="selectedDate">Choose a date:</label>
+        <input type="date" id="selectedDate" name="selectedDate" (change)="saveSelectedDate($event)">
+      </form>
+    </div>
+
+  <div>
+    <canvas id="myChart" width="300" height="100"></canvas>
+  </div>
+
+  <!--
+  <div>
+    <h2>Chat</h2>
+    <div *ngFor="let message of chatMessages">
+      {{ message }}
+    </div>
+    <input [(ngModel)]="chatMessage" placeholder="Type your message" />
+    <button type="button" (click)="sendChatMessage()">Send</button>
+  </div>
+
+  <div>
+    <h2>Chat</h2>
+    <div *ngFor="let message of chatMessages">
+      {{ message.senderId }}: {{ message.message }}
+    </div>
+    <form [formGroup]="chatMessageForm" (ngSubmit)="sendChatMessage()">
+      <input formControlName="message" placeholder="Type your message" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+-->
+
+
+
+</body>
+</html>

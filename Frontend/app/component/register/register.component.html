@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+</head>
+<body>
+<div class="container">
+  <h1>Register</h1>
+  <form>
+
+      <div *ngIf="prmEmail.errors?.['email']" id="valid_mess"> Email address is not valid!</div>
+      <div *ngIf="prmEmail.errors?.['required']" id="valid_mess2">The username field cannot be empty!</div>
+      <input type="primaryEmail" [(ngModel)]="user.username" required [email]="true" #prmEmail="ngModel" id="primaryEmail" name="primaryEmail"><br>
+
+      <label>Name</label><br>
+      <input type="text" [(ngModel)]="user.name" id="name" name="name"><br>
+
+      <label for="password">Password</label><br>
+      <div *ngIf="nullPassword.errors?.['required']" id="valid_mess3">The password field cannot be empty!</div>
+      <input type="password"  [(ngModel)]="user.password" required #nullPassword="ngModel" id="password" name="password"><br>
+
+    <div>
+      <label for="password">Password again</label><br>
+      <input type="password" [(ngModel)]="pass" id="repeatPassword" name="repeatPassword"><br>
+    </div>
+
+    <button id="register" type="submit" (click)="createUser()">Register now</button>
+    <p>You have an account already?</p>
+    <h3><a href='login'>Click here to login</a></h3>
+  </form>
+</div>
+
+</body>
+</html>
+

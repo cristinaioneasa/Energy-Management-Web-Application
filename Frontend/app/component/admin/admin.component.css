@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  background-color: black;
+}
+
+h1{
+  margin-top: 0px;
+  margin-left: 15px;
+  font-size: 55px;
+  font-style: oblique;
+  color: white;
+}
+
+.panel{
+  background: black;
+  color: white;
+  width: 250px;
+  margin-top: 20px;
+}
+
+#b1{
+  margin-left: 20px;
+  margin-top: 50px;
+  width: 200px;
+  background: darkblue;
+  color: white;
+}
+
+#b2{
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 200px;
+  background: darkblue;
+  color: white;
+}
+
+#b3{
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 200px;
+  background: darkblue;
+  color: white;
+}
+
+#b4{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  background: darkblue;
+  color: white;
+}
+
+#b5{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 185px;
+  background: black;
+  color: white;
+}
+
+#b6{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 185px;
+  background: black;
+  color: white;
+}
+
+#b8{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  background: darkblue;
+  color: white;
+}
+
+.container{
+  background: rgb(0, 0, 0);
+  margin-top: 20px;
+  margin-left: 280px;
+  width: 1600px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 5%;
+}
+
+.insertDevice{
+  margin-top: 10px;
+  background:rgba(255, 255, 255,0.7);
+  width: 300px;
+  text-align: center;
+  border-radius: 15%;
+}
+
+.deleteDevice{
+  margin-top: 10px;
+  background:rgba(255, 255, 255,0.7);
+  width: 300px;
+  text-align: center;
+  border-radius: 15%;
+}
+
+.deleteUser{
+  margin-top: 10px;
+  background:rgba(255, 255, 255,0.7);
+  width: 300px;
+  text-align: center;
+  border-radius: 15%;
+}
+
+#lista_device-uri{
+  margin-top: 10px;
+  background:rgba(255, 255, 255,0.7);
+  width: 446px;
+  text-align: center;
+  border-radius: 15%;
+}
+
+#lista_clienti{
+  margin-top: 10px;
+  background:rgba(255, 255, 255,0.7);
+  width: 300px;
+  text-align: center;
+  border-radius: 15%;
+}
+
+.chat{
+  margin-top: -300px;
+  margin-left: -20px;
+}

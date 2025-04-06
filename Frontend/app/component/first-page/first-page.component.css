@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  background-color: black;
+}
+.container {
+  background-color: black;
+  height: 40px;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: normal;
+}
+
+h1{
+  margin-top: 25px;
+  margin-left: -175px;
+  font-size: 55px;
+  font-style: oblique;
+  color: white;
+}
+
+#icon_login {
+  margin-left: 1100px;
+  margin-top: -10px;
+}
+
+.button-row{
+  margin-top: 75px;
+  margin-left: 450px;
+}
+
+#b1{
+  outline-color: black;
+  border-radius: 20%;
+  background-color: black;
+  margin-left: 25px;
+  color: white;
+  font-size: 20px;
+}
+
+#b2{
+  outline-color: black;
+  border-radius: 20%;
+  background-color: black;
+  margin-left: 25px;
+  color: white;
+  font-size: 20px;
+}
+
+#b3{
+  outline-color: black;
+  border-radius: 20%;
+  background-color: black;
+  margin-left: 25px;
+  color: white;
+  font-size: 20px;
+}
+
+#b4{
+  outline-color: black;
+  border-radius: 20%;
+  background-color: black;
+  margin-left: 25px;
+  color: white;
+  font-size: 20px;
+}
+
+.panel {
+  background-color: darkblue;
+  border-radius: 5px;
+  width: 420px;
+  margin-top: 50px;
+  margin-left: 15px;
+  font-size: 17px;
+  color: white;
+}
+
+.panel h2 {
+  font-size: 23px;
+  color: white;
+  padding-bottom: 10px;
+}
+
+#img1{
+  margin-left: 10px;
+}
+
+#img2{
+  margin-left: 10px;
+}
+
+.panel2 {
+  background-color: white;
+  border-radius: 5px;
+  width: 600px;
+  margin-top: -1125px;
+  margin-left: 500px;
+  font-size: 20px;
+  color: black;
+}
+
+.panel2 h2 {
+  font-size: 25px;
+  color: black;
+  padding-bottom: 10px;
+}
+
+#img3 {
+  position: absolute;
+  margin-left: 1100px;
+  margin-top: -250px; /* Adjust the negative margin value as needed */
+}
+
+.panel3{
+  margin-left: 500px;
+  font-size: 20px;
+  width: 950px;
+}
+
